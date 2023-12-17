@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+      "useBuiltIns": "usage",
+      "corejs": 3
+    }],
+    "@babel/preset-typescript"
+  ],
+  "module": {
+    "rules": [
+      {
+        "test": "/\\.tsx?$/",
+        "exclude": "/node_modules/",
+        "use": {
+          "loader": "ts-loader"
+        }
+      }
+    ]
+  },
+  "resolve": {
+    "extensions": [".tsx",".ts",".js"]
+  }
+}
